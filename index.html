@@ -4,375 +4,319 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> My Porfolio </title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <!-- <link rel="stylesheet" href="mediaqueries.css" /> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: {
+                poppins: ['Poppins', 'sans-serif'],
+              },
+              colors: { // Example custom colors for tags if needed
+                'deep-purple': {
+                    100: '#EDE7F6',
+                    800: '#512DA8',
+                },
+                'light-blue': {
+                    100: '#E1F5FE',
+                    800: '#0288D1',
+                },
+                'amber': {
+                    100: '#FFECB3',
+                    800: '#FFA000',
+                }
+              }
+            }
+          }
+        }
+      </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <nav id="desktop-nav"> 
-        <div class="logo"> Lisa (Jianing) Yu </div>
-        <div> 
-            <ul class="nav-links"> 
-                <li> <a href="#about"> About </a></li>
-                <li> <a href="#experience"> Experience </a></li>
-                <li> <a href="#projects"> Projects </a></li>
-                <li> <a href="#contact"> Contact </a></li>
+<body class="font-poppins">
+    <nav id="desktop-nav" class="flex justify-around items-center h-20 fixed top-0 left-0 right-0 bg-white z-50 shadow-md">
+        <div class="logo text-2xl cursor-default font-semibold text-gray-700"> Lisa (Jianing) Yu </div>
+        <div>
+            <ul class="nav-links flex gap-8 list-none text-lg">
+                <li> <a href="#profile" class="text-gray-700 no-underline hover:text-blue-600 transition-colors duration-300"> Home </a></li>
+                <li> <a href="#about" class="text-gray-700 no-underline hover:text-blue-600 transition-colors duration-300"> About </a></li>
+                <li> <a href="#projects" class="text-gray-700 no-underline hover:text-blue-600 transition-colors duration-300"> Projects </a></li>
+                <li> <a href="#contact" class="text-gray-700 no-underline hover:text-blue-600 transition-colors duration-300"> Contact </a></li>
             </ul>
         </div>
     </nav>
 
-    <nav id="hamburger-nav">
-        <div class="logo"> Lisa (Jianing) Yu </div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()"> 
-                <span></span>
-                <span></span>
-                <span></span>
+    <nav id="hamburger-nav" class="hidden"> <div class="logo text-2xl font-semibold"> Lisa (Jianing) Yu </div>
+        <div class="hamburger-menu relative inline-block">
+            <div class="hamburger-icon cursor-pointer flex flex-col justify-between h-6 w-8" onclick="toggleMenu()">
+                <span class="block w-full h-0.5 bg-black transition-all duration-300 ease-in-out"></span>
+                <span class="block w-full h-0.5 bg-black transition-all duration-300 ease-in-out"></span>
+                <span class="block w-full h-0.5 bg-black transition-all duration-300 ease-in-out"></span>
             </div>
-            <div class="menu-links">
-                <li> <a href="#about" onclick="toggleMenu()"> About </a></li>
-                <li> <a href="#experience" onclick="toggleMenu()"> Experience </a></li>
-                <li> <a href="#projects" onclick="toggleMenu()"> Projects </a></li>
-                <li> <a href="#contact" onclick="toggleMenu()"> Contact </a></li>
+            <div class="menu-links absolute top-full right-0 bg-white w-max max-h-0 overflow-hidden transition-all duration-300 ease-in-out shadow-lg rounded-md z-50">
+                <ul class="list-none p-0 m-0">
+                    <li> <a href="#about" onclick="toggleMenu()" class="block p-2.5 text-center text-xl text-black no-underline transition-all duration-300 ease-in-out hover:bg-gray-100"> About </a></li>
+                    <li> <a href="#projects" onclick="toggleMenu()" class="block p-2.5 text-center text-xl text-black no-underline transition-all duration-300 ease-in-out hover:bg-gray-100"> Projects </a></li>
+                    <li> <a href="#contact" onclick="toggleMenu()" class="block p-2.5 text-center text-xl text-black no-underline transition-all duration-300 ease-in-out hover:bg-gray-100"> Contact </a></li>
+                </ul>
             </div>
         </div>
     </nav>
-   
-    <section id="profile"> 
-        <div class="section__pic-container"> 
-            <img src="./assets/profile-pic.png" alt="Lisa Yu profile picture">
-        </div>
-        <div class="section__text"> 
-            <p class="section__text__p1"> Hello, I'm </p>
-            <h1 class="title"> Lisa Yu</h1>
-            <!-- <p class="section__text__p2"> Data Analyst </p> -->
-            <div class="btn-container"> 
-                <button class="btn btn-color-2" onclick="window.open('./assets/LisaYu_Resume.pdf')"> 
-                    Download CV
-                </button>
 
-                <button class="btn btn-color-1" onclick="location.href='./#contact'"> 
-                    Contact Info
-                </button>
+    <main id="main-content">
+        <section id="profile" class="pt-[17vh] flex flex-col md:flex-row justify-center items-center gap-10 md:gap-20 min-h-screen px-4 md:px-10 lg:px-40">
+            <div class="section__pic-container flex-shrink-0 w-56 h-56 md:w-80 md:h-80 lg:w-96 lg:h-96 mt-8 md:mt-0">
+                <img src="./assets/profile-pic-2.jpg" alt="Lisa Yu profile picture" class="rounded-full w-full h-full object-cover shadow-xl">
             </div>
-            <div id="socials-container"> 
-                <img src="./assets/linkedin.png" alt="My Linkedin profile"
-                class="icon" onclick="location.href='https://www.linkedin.com/in/lisayuyjn/'">
-                <img src="./assets/github.png" alt="My Github profile"
-                class="icon" onclick="location.href='https://github.com/Lisayjn749'">
+            <div class="section__text text-center md:text-left">
+                <p class="section__text__p1 font-semibold text-gray-600 text-lg md:text-xl"> Hello, I'm </p>
+                <h1 class="title text-4xl md:text-5xl lg:text-6xl font-bold my-2"> Lisa Yu</h1>
+                <p class="section__text__p2 text-xl md:text-2xl text-gray-700 mb-6"> Data Analyst </p>
+                <div class="btn-container flex flex-col sm:flex-row justify-center md:justify-start gap-4 my-4">
+                    <button class="btn btn-color-2 py-3 px-6 rounded-full border-2 border-gray-700 text-gray-700 hover:bg-gray-700 hover:text-white transition-all duration-300 ease-in-out shadow-sm hover:shadow-md" onclick="window.open('https://placehold.co/800x1100/E0E0E0/B0B0B0?text=Resume.pdf')">
+                        Download CV
+                    </button>
+                    <button class="btn btn-color-1 py-3 px-6 rounded-full bg-gray-700 text-white border-2 border-gray-700 hover:bg-black transition-all duration-300 ease-in-out shadow-sm hover:shadow-md" onclick="location.href='./#contact'">
+                        Contact Info
+                    </button>
+                </div>
+                <div id="socials-container" class="flex justify-center md:justify-start mt-6 gap-5">
+                    <a href="https://www.linkedin.com/in/lisayuyjn/" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600 transition-colors">
+                        <i data-lucide="linkedin" class="icon h-7 w-7"></i>
+                    </a>
+                    <a href="https://github.com/Lisayjn749" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-black transition-colors">
+                        <i data-lucide="github" class="icon h-7 w-7"></i>
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="about">
-        <p class="section__text__p1">Get To Know More</p>
-        <h1 class="title">About Me</h1>
-        <div class="section-container">
-          <div class="section__pic-container">
-            <img
-              src="./assets/about-pic.jpg"
-              alt="Profile picture"
-              class="about-pic"
-            />
-          </div>
-          <div class="about-details-container">
-            <div class="about-containers">
-              <div class="details-container">
+        <section id="about" class="py-16 md:py-24 px-4 md:px-10 lg:px-40 bg-slate-50">
+            <p class="section__text__p1 text-center font-semibold text-gray-600 text-lg md:text-xl">Get To Know More</p>
+            <h1 class="title text-center text-3xl md:text-4xl lg:text-5xl font-bold my-4 mb-12 md:mb-16">About Me</h1>
+            <div class="section-container md:flex gap-12 lg:gap-16 items-center">
+              <div class="section__pic-container flex-shrink-0 w-full md:w-1/3 max-w-xs lg:max-w-sm mx-auto mb-8 md:mb-0">
                 <img
-                  src="./assets/education.png"
-                  alt="Education icon"
-                  class="icon"
+                  src="./assets/about-pic.jpg"
+                  alt="Profile picture"
+                  class="about-pic rounded-3xl w-full h-auto object-cover shadow-lg"
                 />
-                <h3>Education</h3>
-                <p>B.Sc. in Carnegie Mellon University <br />M.Sc. in New York University</p>
               </div>
-              <div class="details-container">
-                <img
-                  src="./assets/experience.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <h3>Experience</h3>
-                <p> Data Analyst Intern <br />Software Engineer Interns <br /> Teaching Assistant/Tutor </p>
+              <div class="about-details-container flex-grow">
+                <div class="about-containers grid sm:grid-cols-2 gap-6 lg:gap-8 mb-8">
+                  <div class="details-container p-6 bg-white rounded-2xl border border-gray-200 text-center shadow-lg hover:shadow-xl transition-shadow">
+                    <i data-lucide="graduation-cap" class="icon h-10 w-10 mx-auto mb-3 text-blue-600"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Education</h3>
+                    <p class="text-gray-600 text-sm">B.Sc. in Carnegie Mellon University <br />M.Sc. in New York University</p>
+                  </div>
+                  <div class="details-container p-6 bg-white rounded-2xl border border-gray-200 text-center shadow-lg hover:shadow-xl transition-shadow">
+                    <i data-lucide="lightbulb" class="icon h-10 w-10 mx-auto mb-3 text-blue-600"></i> <h3 class="text-xl font-semibold mb-2 text-gray-800">Key Skills</h3> <p class="text-gray-600 text-sm"> Data Analysis, Python, SQL <br />Web Development, Project Mgt. </p>
+                  </div>
+                </div>
+                <div class="text-container bg-white p-6 lg:p-8 rounded-2xl border border-gray-200 shadow-lg">
+                  <p class="text-gray-700 leading-relaxed text-justify">
+                    Hello! I'm Lisa, a passionate and detail-oriented Data Analyst with a Master's degree from New York University and a Bachelor's from Carnegie Mellon University. My academic journey has equipped me with a strong foundation in statistical analysis, machine learning, and data visualization. I thrive on transforming complex datasets into actionable insights. I'm proficient in tools like Python, R, SQL, and Tableau, and I'm always eager to learn new technologies. Beyond my technical skills, I'm a collaborative team player and an effective communicator, dedicated to making data accessible and understandable for everyone. I enjoy tackling challenging problems and contributing to impactful projects.
+                  </p>
+                </div>
               </div>
             </div>
-            <div class="text-container">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-                reprehenderit et laborum, rem, dolore eum quod voluptate
-                exercitationem nobis, nihil esse debitis maxime facere minus sint
-                delectus velit in eos quo officiis explicabo deleniti dignissimos.
-                Eligendi illum libero dolorum cum laboriosam corrupti quidem,
-                reiciendis ea magnam? Nulla, impedit fuga!
-              </p>
+            <div class="text-center mt-12 md:mt-16">
+                <a href="./#projects" class="inline-block text-blue-600 hover:text-blue-800 transition-colors">
+                    <i data-lucide="arrow-down-circle" class="icon arrow h-12 w-12 mx-auto"></i>
+                </a>
             </div>
-          </div>
-        </div>
-        <img
-          src="./assets/arrow.png"
-          alt="Arrow icon"
-          class="icon arrow"
-          onclick="location.href='./#experience'"
-        />
-    </section>
+        </section>
 
-    <section id="experience">
-    <p class="section__text__p1">Explore My</p>
-    <h1 class="title">Experience</h1>
-    <div class="experience-details-container">
-        <div class="about-containers">
-        <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-            <article>
-                <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-                />
-                <div>
-                <h3>HTML</h3>
-                <p>Experienced</p>
+        <section id="projects" class="py-16 md:py-24 px-4 md:px-10 lg:px-40 bg-slate-50"> <p class="section__text__p1 text-center font-semibold text-gray-600 text-lg md:text-xl">Browse My Recent</p>
+            <h1 class="title text-center text-3xl md:text-4xl lg:text-5xl font-bold my-4 mb-12 md:mb-16">Projects</h1>
+            <div class="experience-details-container mt-12"> <div class="about-containers grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="details-container color-container p-6 bg-white rounded-2xl border border-gray-200 shadow-lg flex flex-col hover:shadow-xl transition-shadow">
+                  <div class="article-container mb-4 h-52">
+                    <img
+                      src="https://placehold.co/600x400/AEC6CF/60828F?text=Project+Alpha"
+                      alt="Project 1"
+                      class="project-img rounded-xl w-full h-full object-cover"
+                    />
+                  </div>
+                  <h2 class="experience-sub-title project-title text-xl font-semibold mb-2 text-gray-800">Project Alpha</h2>
+                  <p class="project-description text-sm text-gray-600 mb-3 flex-grow">
+                    This is a brief description of Project Alpha. It involved developing a responsive web application using React and Node.js to streamline data processing for a fictional client. Key features include user authentication and data visualization.
+                  </p>
+                  <div class="project-tags-container mb-4">
+                    <span class="tag bg-blue-100 text-blue-800 py-1 px-3">Web Development</span>
+                    <span class="tag bg-green-100 text-green-800 py-1 px-3">React</span>
+                    <span class="tag bg-purple-100 text-purple-800 py-1 px-3">Node.js</span>
+                  </div>
+                  <div class="btn-container flex justify-center gap-3 mt-auto">
+                    <button
+                      class="btn btn-color-2 project-btn py-2 px-4 rounded-full border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white transition-all duration-300 ease-in-out text-sm"
+                      onclick="location.href='https://github.com/'"
+                    >
+                      Github
+                    </button>
+                    <button
+                      class="btn btn-color-2 project-btn py-2 px-4 rounded-full border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white transition-all duration-300 ease-in-out text-sm"
+                      onclick="location.href='https://github.com/'"
+                    >
+                      Live Demo
+                    </button>
+                  </div>
                 </div>
-            </article>
-            <article>
-                <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-                />
-                <div>
-                <h3>CSS</h3>
-                <p>Experienced</p>
+                <div class="details-container color-container p-6 bg-white rounded-2xl border border-gray-200 shadow-lg flex flex-col hover:shadow-xl transition-shadow">
+                  <div class="article-container mb-4 h-52">
+                    <img
+                      src="https://placehold.co/600x400/FFDAB9/D4A276?text=Project+Beta"
+                      alt="Project 2"
+                      class="project-img rounded-xl w-full h-full object-cover"
+                    />
+                  </div>
+                  <h2 class="experience-sub-title project-title text-xl font-semibold mb-2 text-gray-800">Project Beta</h2>
+                  <p class="project-description text-sm text-gray-600 mb-3 flex-grow">
+                    Project Beta focused on analyzing customer churn using Python and scikit-learn. The outcome was a predictive model that identified key factors contributing to churn, providing actionable insights for retention strategies.
+                  </p>
+                  <div class="project-tags-container mb-4">
+                    <span class="tag bg-yellow-100 text-yellow-800 py-1 px-3">Data Analysis</span>
+                    <span class="tag bg-red-100 text-red-800 py-1 px-3">Machine Learning</span>
+                    <span class="tag bg-green-100 text-green-800 py-1 px-3">Python</span>
+                  </div>
+                  <div class="btn-container flex justify-center gap-3 mt-auto">
+                    <button class="btn btn-color-2 project-btn py-2 px-4 rounded-full border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white transition-all duration-300 ease-in-out text-sm" onclick="location.href='https://github.com/'">Github</button>
+                    <button class="btn btn-color-2 project-btn py-2 px-4 rounded-full border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white transition-all duration-300 ease-in-out text-sm" onclick="location.href='https://github.com/'">Live Demo</button>
+                  </div>
                 </div>
-            </article>
-            <article>
-                <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-                />
-                <div>
-                <h3>SASS</h3>
-                <p>Intermediate</p>
+                <div class="details-container color-container p-6 bg-white rounded-2xl border border-gray-200 shadow-lg flex flex-col hover:shadow-xl transition-shadow">
+                  <div class="article-container mb-4 h-52">
+                    <img
+                      src="https://placehold.co/600x400/C8E6C9/73A9AD?text=Project+Gamma"
+                      alt="Project 3"
+                      class="project-img rounded-xl w-full h-full object-cover"
+                    />
+                  </div>
+                  <h2 class="experience-sub-title project-title text-xl font-semibold mb-2 text-gray-800">Project Gamma</h2>
+                  <p class="project-description text-sm text-gray-600 mb-3 flex-grow">
+                    This project involved creating an interactive dashboard with Tableau to visualize sales data. The dashboard allowed for dynamic filtering and provided a clear overview of performance across different regions and product categories.
+                  </p>
+                  <div class="project-tags-container mb-4">
+                    <span class="tag bg-indigo-100 text-indigo-800 py-1 px-3">Data Visualization</span>
+                    <span class="tag bg-pink-100 text-pink-800 py-1 px-3">Tableau</span>
+                    <span class="tag bg-gray-100 text-gray-800 py-1 px-3">Business Intelligence</span>
+                  </div>
+                  <div class="btn-container flex justify-center gap-3 mt-auto">
+                    <button class="btn btn-color-2 project-btn py-2 px-4 rounded-full border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white transition-all duration-300 ease-in-out text-sm" onclick="location.href='https://github.com/'">Github</button>
+                    <button class="btn btn-color-2 project-btn py-2 px-4 rounded-full border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white transition-all duration-300 ease-in-out text-sm" onclick="location.href='https://github.com/'">Live Demo</button>
+                  </div>
                 </div>
-            </article>
-            <article>
-                <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-                />
-                <div>
-                <h3>JavaScript</h3>
-                <p>Basic</p>
+                <div class="details-container color-container p-6 bg-white rounded-2xl border border-gray-200 shadow-lg flex flex-col hover:shadow-xl transition-shadow">
+                  <div class="article-container mb-4 h-52">
+                    <img
+                      src="https://placehold.co/600x400/B2DFDB/00796B?text=Project+Delta"
+                      alt="Project 4"
+                      class="project-img rounded-xl w-full h-full object-cover"
+                    />
+                  </div>
+                  <h2 class="experience-sub-title project-title text-xl font-semibold mb-2 text-gray-800">Project Delta</h2>
+                  <p class="project-description text-sm text-gray-600 mb-3 flex-grow">
+                    A placeholder description for Project Delta. This project explored advanced data modeling techniques and their application in a real-world scenario, focusing on scalability and performance.
+                  </p>
+                  <div class="project-tags-container mb-4">
+                    <span class="tag bg-teal-100 text-teal-800 py-1 px-3">Data Modeling</span>
+                    <span class="tag bg-cyan-100 text-cyan-800 py-1 px-3">Big Data</span>
+                    <span class="tag bg-lime-100 text-lime-800 py-1 px-3">SQL</span>
+                  </div>
+                  <div class="btn-container flex justify-center gap-3 mt-auto">
+                    <button class="btn btn-color-2 project-btn py-2 px-4 rounded-full border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white transition-all duration-300 ease-in-out text-sm" onclick="location.href='https://github.com/'">Github</button>
+                    <button class="btn btn-color-2 project-btn py-2 px-4 rounded-full border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white transition-all duration-300 ease-in-out text-sm" onclick="location.href='https://github.com/'">Live Demo</button>
+                  </div>
                 </div>
-            </article>
-            <article>
-                <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-                />
-                <div>
-                <h3>TypeScript</h3>
-                <p>Basic</p>
+                <div class="details-container color-container p-6 bg-white rounded-2xl border border-gray-200 shadow-lg flex flex-col hover:shadow-xl transition-shadow">
+                  <div class="article-container mb-4 h-52">
+                    <img
+                      src="https://placehold.co/600x400/FFCCBC/D84315?text=Project+Epsilon"
+                      alt="Project 5"
+                      class="project-img rounded-xl w-full h-full object-cover"
+                    />
+                  </div>
+                  <h2 class="experience-sub-title project-title text-xl font-semibold mb-2 text-gray-800">Project Epsilon</h2>
+                  <p class="project-description text-sm text-gray-600 mb-3 flex-grow">
+                    Description for Project Epsilon. This was a research-oriented project focusing on the ethical implications of AI in data analysis, culminating in a comprehensive report and presentation.
+                  </p>
+                  <div class="project-tags-container mb-4">
+                    <span class="tag bg-orange-100 text-orange-800 py-1 px-3">AI Ethics</span>
+                    <span class="tag bg-red-100 text-red-800 py-1 px-3">Research</span>
+                    <span class="tag bg-gray-100 text-gray-800 py-1 px-3">Report Writing</span>
+                  </div>
+                  <div class="btn-container flex justify-center gap-3 mt-auto">
+                    <button class="btn btn-color-2 project-btn py-2 px-4 rounded-full border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white transition-all duration-300 ease-in-out text-sm" onclick="location.href='https://github.com/'">Github</button>
+                    <button class="btn btn-color-2 project-btn py-2 px-4 rounded-full border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white transition-all duration-300 ease-in-out text-sm" onclick="location.href='https://github.com/'">Live Demo</button>
+                  </div>
                 </div>
-            </article>
-            <article>
-                <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-                />
-                <div>
-                <h3>Material UI</h3>
-                <p>Intermediate</p>
+                <div class="details-container color-container p-6 bg-white rounded-2xl border border-gray-200 shadow-lg flex flex-col hover:shadow-xl transition-shadow">
+                  <div class="article-container mb-4 h-52">
+                    <img
+                      src="https://placehold.co/600x400/CFD8DC/455A64?text=Project+Zeta"
+                      alt="Project 6"
+                      class="project-img rounded-xl w-full h-full object-cover"
+                    />
+                  </div>
+                  <h2 class="experience-sub-title project-title text-xl font-semibold mb-2 text-gray-800">Project Zeta</h2>
+                  <p class="project-description text-sm text-gray-600 mb-3 flex-grow">
+                    Project Zeta involved project management and coordination for a small team developing a community-focused application. This included timeline management, resource allocation, and stakeholder communication.
+                  </p>
+                  <div class="project-tags-container mb-4">
+                    <span class="tag bg-deep-purple-100 text-deep-purple-800 py-1 px-3">Project Management</span>
+                    <span class="tag bg-light-blue-100 text-light-blue-800 py-1 px-3">Team Coordination</span>
+                    <span class="tag bg-amber-100 text-amber-800 py-1 px-3">Agile</span>
+                  </div>
+                  <div class="btn-container flex justify-center gap-3 mt-auto">
+                    <button class="btn btn-color-2 project-btn py-2 px-4 rounded-full border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white transition-all duration-300 ease-in-out text-sm" onclick="location.href='https://github.com/'">Github</button>
+                    <button class="btn btn-color-2 project-btn py-2 px-4 rounded-full border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white transition-all duration-300 ease-in-out text-sm" onclick="location.href='https://github.com/'">Live Demo</button>
+                  </div>
                 </div>
-            </article>
+              </div>
             </div>
-        </div>
-        <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-            <article>
-                <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-                />
-                <div>
-                <h3>PostgreSQL</h3>
-                <p>Basic</p>
-                </div>
-            </article>
-            <article>
-                <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-                />
-                <div>
-                <h3>Node JS</h3>
-                <p>Intermediate</p>
-                </div>
-            </article>
-            <article>
-                <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-                />
-                <div>
-                <h3>Express JS</h3>
-                <p>Intermediate</p>
-                </div>
-            </article>
-            <article>
-                <img
-                src="./assets/checkmark.png"
-                alt="Experience icon"
-                class="icon"
-                />
-                <div>
-                <h3>Git</h3>
-                <p>Intermediate</p>
-                </div>
-            </article>
+            <div class="text-center mt-12 md:mt-16">
+                <a href="./#contact" class="inline-block text-blue-600 hover:text-blue-800 transition-colors">
+                    <i data-lucide="arrow-down-circle" class="icon arrow h-12 w-12 mx-auto"></i>
+                </a>
             </div>
-        </div>
-        </div>
-    </div>
-    <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-    />
-    </section>
+        </section>
 
-    <section id="projects">
-        <p class="section__text__p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-          <div class="about-containers">
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img
-                  src="./assets/project-1.png"
-                  alt="Project 1"
-                  class="project-img"
-                />
+        <section id="contact" class="py-16 md:py-24 px-4 md:px-10 lg:px-40 min-h-[75vh] flex flex-col justify-center items-center"> 
+            <p class="section__text__p1 text-center font-semibold text-gray-600 text-lg md:text-xl">Get in Touch</p>
+            <h1 class="title text-center text-3xl md:text-4xl lg:text-5xl font-bold my-4 mb-12">Contact Me</h1>
+            <div class="contact-info-upper-container flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 border border-gray-200 rounded-3xl p-6 sm:p-10 bg-white shadow-xl max-w-2xl w-full">
+              <div class="contact-info-container flex items-center gap-3 sm:gap-4 p-3 rounded-xl hover:bg-gray-100 transition-colors duration-200">
+                <i data-lucide="mail" class="icon contact-icon email-icon h-7 w-7 text-blue-600"></i>
+                <p><a href="mailto:jy5098@nyu.edu" class="text-gray-700 hover:text-blue-700 hover:underline text-base sm:text-lg">jy5098@nyu.edu</a></p>
               </div>
-              <h2 class="experience-sub-title project-title">Project One</h2>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Github
-                </button>
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Live Demo
-                </button>
+              <div class="contact-info-container flex items-center gap-3 sm:gap-4 p-3 rounded-xl hover:bg-gray-100 transition-colors duration-200">
+                <i data-lucide="linkedin" class="icon contact-icon h-7 w-7 text-blue-600"></i>
+                <p><a href="https://www.linkedin.com/in/lisayuyjn/" target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:text-blue-700 hover:underline text-base sm:text-lg">LinkedIn</a></p>
               </div>
             </div>
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img
-                  src="./assets/project-2.png"
-                  alt="Project 2"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title">Project Two</h2>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Github
-                </button>
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Live Demo
-                </button>
-              </div>
-            </div>
-            <div class="details-container color-container">
-              <div class="article-container">
-                <img
-                  src="./assets/project-3.png"
-                  alt="Project 3"
-                  class="project-img"
-                />
-              </div>
-              <h2 class="experience-sub-title project-title">Project Three</h2>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Github
-                </button>
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Live Demo
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <img
-          src="./assets/arrow.png"
-          alt="Arrow icon"
-          class="icon arrow"
-          onclick="location.href='./#contact'"
-        />
-    </section>
+        </section>
 
-    <section id="contact">
-        <p class="section__text__p1">Get in Touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
-          <div class="contact-info-container">
-            <img
-              src="./assets/email.png"
-              alt="Email icon"
-              class="icon contact-icon email-icon"
-            />
-            <p><a href="mailto:jy5098@nyu.edu">jy5098@nyu.edu</a></p>
-          </div>
-          <div class="contact-info-container">
-            <img
-              src="./assets/linkedin.png"
-              alt="LinkedIn icon"
-              class="icon contact-icon"
-            />
-            <p><a href="https://www.linkedin.com/in/lisayuyjn/">LinkedIn</a></p>
-          </div>
-        </div>
-      </section>
-      <footer>
-        <nav>
-          <div class="nav-links-container">
-            <ul class="nav-links">
-              <li><a href="#about">About</a></li>
-              <li><a href="#experience">Experience</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
+
+    </main>
+
+    <footer class="py-10 bg-gray-800 text-white">
+        <nav class="container mx-auto px-4">
+            <div class="nav-links-container flex justify-center mb-6">
+                <ul class="nav-links flex flex-wrap justify-center gap-x-6 sm:gap-x-8 gap-y-2 list-none text-sm sm:text-base">
+                    <li><a href="#about" class="text-gray-300 hover:text-white hover:underline">About</a></li>
+                    <li><a href="#projects" class="text-gray-300 hover:text-white hover:underline">Projects</a></li>
+                    <li><a href="#contact" class="text-gray-300 hover:text-white hover:underline">Contact</a></li>
+                </ul>
+            </div>
+            <!-- <p class="text-center text-xs sm:text-sm text-gray-400">&copy; 2024 Lisa (Jianing) Yu. All Rights Reserved.</p> -->
         </nav>
-      </footer>
+    </footer>
 
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons(); // Initialize Lucide icons
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
- 

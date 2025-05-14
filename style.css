@@ -28,7 +28,7 @@ a,
     
 /* DESKTOP NAV */
 
-nav, 
+/* nav, 
 .nav-links {
     display: flex;
 }
@@ -64,7 +64,7 @@ a:hover {
 
 .logo:hover {
     cursor: default;
-}
+} */
 
 /* HAMBURGER MENU */
 
@@ -309,7 +309,7 @@ section {
 
 /* PROJECTS SECTION */
 
-#projects {
+/* #projects {
     position: relative;
   }
   
@@ -332,7 +332,7 @@ section {
   .project-btn {
     color: black;
     border-color: rgb(163, 163, 163);
-  }
+  } */
 
   /* CONTACT */
 

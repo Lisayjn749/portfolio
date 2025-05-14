@@ -1,3 +1,15 @@
+/* In mediaqueries.css */
+@media screen and (max-width: 1200px) {
+    #main-content {
+        padding-top: 10vh; /* Adjusts based on hamburger nav height */
+    }
+}
+@media screen and (max-width: 600px) {
+    #main-content {
+        padding-top: 8vh; /* Further adjustment for smaller hamburger nav */
+    }
+}
+
 @media screen and (max-width: 1400px) {
     #profile {
       height: 83vh;
