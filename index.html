@@ -72,9 +72,10 @@
             <div class="section__text text-center md:text-left">
                 <p class="section__text__p1 font-semibold text-gray-600 text-lg md:text-xl"> Hello, I'm </p>
                 <h1 class="title text-4xl md:text-5xl lg:text-6xl font-bold my-2"> Lisa Yu</h1>
-                <p class="section__text__p2 text-xl md:text-2xl text-gray-700 mb-6"> Data Analyst </p>
+                <!-- <p class="section__text__p2 text-xl md:text-2xl text-gray-700 mb-6"> Data Analyst </p> -->
                 <div class="btn-container flex flex-col sm:flex-row justify-center md:justify-start gap-4 my-4">
-                    <button class="btn btn-color-2 py-3 px-6 rounded-full border-2 border-gray-700 text-gray-700 hover:bg-gray-700 hover:text-white transition-all duration-300 ease-in-out shadow-sm hover:shadow-md" onclick="window.open('https://placehold.co/800x1100/E0E0E0/B0B0B0?text=Resume.pdf')">
+                    <button class="btn btn-color-2 py-3 px-6 rounded-full border-2 border-gray-700 text-gray-700 hover:bg-gray-700 hover:text-white transition-all duration-300 ease-in-out shadow-sm hover:shadow-md" 
+                    onclick="window.open('./assets/LisaYu_Resume.pdf')">
                         Download CV
                     </button>
                     <button class="btn btn-color-1 py-3 px-6 rounded-full bg-gray-700 text-white border-2 border-gray-700 hover:bg-black transition-all duration-300 ease-in-out shadow-sm hover:shadow-md" onclick="location.href='./#contact'">
@@ -111,13 +112,20 @@
                     <p class="text-gray-600 text-sm">B.Sc. in Carnegie Mellon University <br />M.Sc. in New York University</p>
                   </div>
                   <div class="details-container p-6 bg-white rounded-2xl border border-gray-200 text-center shadow-lg hover:shadow-xl transition-shadow">
-                    <i data-lucide="lightbulb" class="icon h-10 w-10 mx-auto mb-3 text-blue-600"></i> <h3 class="text-xl font-semibold mb-2 text-gray-800">Key Skills</h3> <p class="text-gray-600 text-sm"> Data Analysis, Python, SQL <br />Web Development, Project Mgt. </p>
+                    <i data-lucide="lightbulb" class="icon h-10 w-10 mx-auto mb-3 text-blue-600"></i> <h3 class="text-xl font-semibold mb-2 text-gray-800">
+                        Domain</h3> <p class="text-gray-600 text-sm"> Data Analytics, Business Analytics, Software Engineering, Project Management, Teaching</p>
                   </div>
                 </div>
                 <div class="text-container bg-white p-6 lg:p-8 rounded-2xl border border-gray-200 shadow-lg">
                   <p class="text-gray-700 leading-relaxed text-justify">
-                    Hello! I'm Lisa, a passionate and detail-oriented Data Analyst with a Master's degree from New York University and a Bachelor's from Carnegie Mellon University. My academic journey has equipped me with a strong foundation in statistical analysis, machine learning, and data visualization. I thrive on transforming complex datasets into actionable insights. I'm proficient in tools like Python, R, SQL, and Tableau, and I'm always eager to learn new technologies. Beyond my technical skills, I'm a collaborative team player and an effective communicator, dedicated to making data accessible and understandable for everyone. I enjoy tackling challenging problems and contributing to impactful projects.
-                  </p>
+                    Hello, I'm Lisa! I'm currently a graduate student at New York University studying Management and Analytics (Business Analytics track). I earned my bachelor's degree at Carnegie Mellon University in Computational and Applied Mathematics and minor in Computer Science. 
+                    <br /> <br /> 
+                    Previously, I was a Data Analyst Intern at World Union on their investment team. I've also had two Full-stack Software Engineer Intern experiences at <a href="https://texera.io/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 hover:underline">UCI Texera</a> for building hub site, and at <a href="https://myestrategy.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 hover:underline">E-strategy Inc.</a> for their IT support team. 
+                    <br /> <br /> 
+                    I love diving into data analytics, programming, and architecting systems. But just as much, I'm driven to see these technical efforts solve real business problems. 
+                    <br /> <br /> 
+                    Feel free to connect with me on <a href="https://www.linkedin.com/in/lisayuyjn/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 hover:underline">Linkedin</a> or reach out through email at jy5098@nyu.edu!
+                </p>
                 </div>
               </div>
             </div>
@@ -128,156 +136,151 @@
             </div>
         </section>
 
-        <section id="projects" class="py-16 md:py-24 px-4 md:px-10 lg:px-40 bg-slate-50"> <p class="section__text__p1 text-center font-semibold text-gray-600 text-lg md:text-xl">Browse My Recent</p>
-            <h1 class="title text-center text-3xl md:text-4xl lg:text-5xl font-bold my-4 mb-12 md:mb-16">Projects</h1>
-            <div class="experience-details-container mt-12"> <div class="about-containers grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="details-container color-container p-6 bg-white rounded-2xl border border-gray-200 shadow-lg flex flex-col hover:shadow-xl transition-shadow">
-                  <div class="article-container mb-4 h-52">
-                    <img
-                      src="https://placehold.co/600x400/AEC6CF/60828F?text=Project+Alpha"
-                      alt="Project 1"
-                      class="project-img rounded-xl w-full h-full object-cover"
-                    />
+        <section id="projects" class="py-20 md:py-28 px-6 md:px-10 lg:px-20 bg-white">
+            <p class="section__text__p1 text-center font-medium text-gray-600 text-lg md:text-xl">Browse My Recent</p>
+            <h1 class="title text-center text-3xl md:text-4xl lg:text-5xl font-bold my-4 mb-12 md:mb-16 text-gray-800">Projects</h1>
+            <div class="max-w-6xl mx-auto">
+              <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="project-card bg-white rounded-xl border border-gray-200 shadow-lg flex flex-col hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                  <div class="article-container h-52 overflow-hidden bg-gray-100 flex justify-center items-center"> 
+                    <img src="./assets/project1.png" alt="Project Alpha" class="project-img w-full h-full object-contain transition-transform duration-300 hover:scale-105"/>
                   </div>
-                  <h2 class="experience-sub-title project-title text-xl font-semibold mb-2 text-gray-800">Project Alpha</h2>
-                  <p class="project-description text-sm text-gray-600 mb-3 flex-grow">
-                    This is a brief description of Project Alpha. It involved developing a responsive web application using React and Node.js to streamline data processing for a fictional client. Key features include user authentication and data visualization.
-                  </p>
-                  <div class="project-tags-container mb-4">
-                    <span class="tag bg-blue-100 text-blue-800 py-1 px-3">Web Development</span>
-                    <span class="tag bg-green-100 text-green-800 py-1 px-3">React</span>
-                    <span class="tag bg-purple-100 text-purple-800 py-1 px-3">Node.js</span>
-                  </div>
-                  <div class="btn-container flex justify-center gap-3 mt-auto">
-                    <button
-                      class="btn btn-color-2 project-btn py-2 px-4 rounded-full border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white transition-all duration-300 ease-in-out text-sm"
-                      onclick="location.href='https://github.com/'"
-                    >
-                      Github
-                    </button>
-                    <button
-                      class="btn btn-color-2 project-btn py-2 px-4 rounded-full border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white transition-all duration-300 ease-in-out text-sm"
-                      onclick="location.href='https://github.com/'"
-                    >
-                      Live Demo
-                    </button>
+                  <div class="p-6 flex flex-col flex-grow">
+                    <h2 class="project-title text-xl font-semibold mb-2 text-gray-800">Data-Driven Investment Insights from Spotify & YouTube Analytics - Spring 25</h2>
+                    <p class="project-description text-sm text-gray-600 mb-4 flex-grow">
+                        Analyzed performance data and audio characteristics of 20,000+ songs from Spotify and YouTube using SQL and statistical methods. Identified distinct audio feature trends correlating with top-performing tracks on each platform, developing a framework to guide music studios in making data-informed A&R and marketing decisions.
+                    </p>
+                    <div class="project-tags-container flex flex-wrap gap-x-2 gap-y-1 mb-4">
+                      <span class="tag bg-blue-100 text-blue-800 py-1 px-2">Data Analytics</span>
+                      <span class="tag bg-green-100 text-green-800 py-1 px-3">Database Management</span>
+                      <span class="tag bg-purple-100 text-purple-800 py-1 px-3">SQL</span>
+                    </div>
+                    <div class="btn-container flex justify-start gap-3 mt-auto">
+                      <button class="btn project-btn text-sm py-2 px-4 border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white rounded-full transition-all" 
+                        onclick="location.href='https://github.com/Lisayjn749/spotify-youtube-music-analytics'">Github</button>
+                      <button class="btn project-btn text-sm py-2 px-4 border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white rounded-full transition-all" 
+                        onclick="window.open('./assets/Spotify+Youtube Report.pdf')">Report</button>
+                    </div>
                   </div>
                 </div>
-                <div class="details-container color-container p-6 bg-white rounded-2xl border border-gray-200 shadow-lg flex flex-col hover:shadow-xl transition-shadow">
-                  <div class="article-container mb-4 h-52">
-                    <img
-                      src="https://placehold.co/600x400/FFDAB9/D4A276?text=Project+Beta"
-                      alt="Project 2"
-                      class="project-img rounded-xl w-full h-full object-cover"
-                    />
+
+
+                <div class="project-card bg-white rounded-xl border border-gray-200 shadow-lg flex flex-col hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                  <div class="article-container h-52 overflow-hidden bg-gray-100 flex justify-center items-center">
+                    <img src="./assets/proj2.png" alt="Project Beta" class="project-img w-full h-full object-contain transition-transform duration-300 hover:scale-105"/>
                   </div>
-                  <h2 class="experience-sub-title project-title text-xl font-semibold mb-2 text-gray-800">Project Beta</h2>
-                  <p class="project-description text-sm text-gray-600 mb-3 flex-grow">
-                    Project Beta focused on analyzing customer churn using Python and scikit-learn. The outcome was a predictive model that identified key factors contributing to churn, providing actionable insights for retention strategies.
-                  </p>
-                  <div class="project-tags-container mb-4">
-                    <span class="tag bg-yellow-100 text-yellow-800 py-1 px-3">Data Analysis</span>
-                    <span class="tag bg-red-100 text-red-800 py-1 px-3">Machine Learning</span>
-                    <span class="tag bg-green-100 text-green-800 py-1 px-3">Python</span>
-                  </div>
-                  <div class="btn-container flex justify-center gap-3 mt-auto">
-                    <button class="btn btn-color-2 project-btn py-2 px-4 rounded-full border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white transition-all duration-300 ease-in-out text-sm" onclick="location.href='https://github.com/'">Github</button>
-                    <button class="btn btn-color-2 project-btn py-2 px-4 rounded-full border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white transition-all duration-300 ease-in-out text-sm" onclick="location.href='https://github.com/'">Live Demo</button>
-                  </div>
-                </div>
-                <div class="details-container color-container p-6 bg-white rounded-2xl border border-gray-200 shadow-lg flex flex-col hover:shadow-xl transition-shadow">
-                  <div class="article-container mb-4 h-52">
-                    <img
-                      src="https://placehold.co/600x400/C8E6C9/73A9AD?text=Project+Gamma"
-                      alt="Project 3"
-                      class="project-img rounded-xl w-full h-full object-cover"
-                    />
-                  </div>
-                  <h2 class="experience-sub-title project-title text-xl font-semibold mb-2 text-gray-800">Project Gamma</h2>
-                  <p class="project-description text-sm text-gray-600 mb-3 flex-grow">
-                    This project involved creating an interactive dashboard with Tableau to visualize sales data. The dashboard allowed for dynamic filtering and provided a clear overview of performance across different regions and product categories.
-                  </p>
-                  <div class="project-tags-container mb-4">
-                    <span class="tag bg-indigo-100 text-indigo-800 py-1 px-3">Data Visualization</span>
-                    <span class="tag bg-pink-100 text-pink-800 py-1 px-3">Tableau</span>
-                    <span class="tag bg-gray-100 text-gray-800 py-1 px-3">Business Intelligence</span>
-                  </div>
-                  <div class="btn-container flex justify-center gap-3 mt-auto">
-                    <button class="btn btn-color-2 project-btn py-2 px-4 rounded-full border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white transition-all duration-300 ease-in-out text-sm" onclick="location.href='https://github.com/'">Github</button>
-                    <button class="btn btn-color-2 project-btn py-2 px-4 rounded-full border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white transition-all duration-300 ease-in-out text-sm" onclick="location.href='https://github.com/'">Live Demo</button>
+                  <div class="p-6 flex flex-col flex-grow">
+                    <h2 class="project-title text-xl font-semibold mb-2 text-gray-800">Mitigating EV Supply Chain Risk: Scenario Analysis & Price Impact Modeling of a Lithium Export Ban - Spring 25 </h2>
+                    <p class="project-description text-sm text-gray-600 mb-4 flex-grow">
+                        Conducted a scenario analysis on the impact of a potential Chinese lithium export ban on the U.S. EV battery supply chain. Employed econometric modeling (ARIMA forecasting) and statistical analysis (t-tests) on import data to quantify potential price increases and financial impacts. Delivered strategic recommendations to enhance supply chain resilience for U.S. EV battery manufacturers.
+                    </p>
+                    <div class="project-tags-container flex flex-wrap gap-x-2 gap-y-1 mb-4">
+                      <span class="tag bg-yellow-100 text-yellow-800 py-1 px-3">Business Analytics</span>
+                      <span class="tag bg-red-100 text-red-800 py-1 px-3">Supply Chain</span>
+                      <span class="tag bg-green-100 text-green-800 py-1 px-3">Advanced Excel</span>
+                      <span class="tag bg-blue-100 text-blue-800 py-1 px-3">Python</span>
+                    </div>
+                    <div class="btn-container flex justify-start gap-3 mt-auto">
+                      <button class="btn project-btn text-sm py-2 px-4 border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white rounded-full transition-all" 
+                      onclick="window.open('./assets/EV_battery_paper.pdf')"> Paper </button>
+                      <button class="btn project-btn text-sm py-2 px-4 border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white rounded-full transition-all" 
+                      onclick="window.open('./assets/EV_pre.pdf')">Slides</button>
+                    </div>
                   </div>
                 </div>
-                <div class="details-container color-container p-6 bg-white rounded-2xl border border-gray-200 shadow-lg flex flex-col hover:shadow-xl transition-shadow">
-                  <div class="article-container mb-4 h-52">
-                    <img
-                      src="https://placehold.co/600x400/B2DFDB/00796B?text=Project+Delta"
-                      alt="Project 4"
-                      class="project-img rounded-xl w-full h-full object-cover"
-                    />
+
+
+                <div class="project-card bg-white rounded-xl border border-gray-200 shadow-lg flex flex-col hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                  <div class="article-container h-52 overflow-hidden bg-gray-100 flex justify-center items-center">
+                    <img src="./assets/texera.png" alt="Project Gamma" class="project-img w-full h-full object-contain transition-transform duration-300 hover:scale-105"/>
                   </div>
-                  <h2 class="experience-sub-title project-title text-xl font-semibold mb-2 text-gray-800">Project Delta</h2>
-                  <p class="project-description text-sm text-gray-600 mb-3 flex-grow">
-                    A placeholder description for Project Delta. This project explored advanced data modeling techniques and their application in a real-world scenario, focusing on scalability and performance.
-                  </p>
-                  <div class="project-tags-container mb-4">
-                    <span class="tag bg-teal-100 text-teal-800 py-1 px-3">Data Modeling</span>
-                    <span class="tag bg-cyan-100 text-cyan-800 py-1 px-3">Big Data</span>
-                    <span class="tag bg-lime-100 text-lime-800 py-1 px-3">SQL</span>
-                  </div>
-                  <div class="btn-container flex justify-center gap-3 mt-auto">
-                    <button class="btn btn-color-2 project-btn py-2 px-4 rounded-full border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white transition-all duration-300 ease-in-out text-sm" onclick="location.href='https://github.com/'">Github</button>
-                    <button class="btn btn-color-2 project-btn py-2 px-4 rounded-full border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white transition-all duration-300 ease-in-out text-sm" onclick="location.href='https://github.com/'">Live Demo</button>
-                  </div>
-                </div>
-                <div class="details-container color-container p-6 bg-white rounded-2xl border border-gray-200 shadow-lg flex flex-col hover:shadow-xl transition-shadow">
-                  <div class="article-container mb-4 h-52">
-                    <img
-                      src="https://placehold.co/600x400/FFCCBC/D84315?text=Project+Epsilon"
-                      alt="Project 5"
-                      class="project-img rounded-xl w-full h-full object-cover"
-                    />
-                  </div>
-                  <h2 class="experience-sub-title project-title text-xl font-semibold mb-2 text-gray-800">Project Epsilon</h2>
-                  <p class="project-description text-sm text-gray-600 mb-3 flex-grow">
-                    Description for Project Epsilon. This was a research-oriented project focusing on the ethical implications of AI in data analysis, culminating in a comprehensive report and presentation.
-                  </p>
-                  <div class="project-tags-container mb-4">
-                    <span class="tag bg-orange-100 text-orange-800 py-1 px-3">AI Ethics</span>
-                    <span class="tag bg-red-100 text-red-800 py-1 px-3">Research</span>
-                    <span class="tag bg-gray-100 text-gray-800 py-1 px-3">Report Writing</span>
-                  </div>
-                  <div class="btn-container flex justify-center gap-3 mt-auto">
-                    <button class="btn btn-color-2 project-btn py-2 px-4 rounded-full border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white transition-all duration-300 ease-in-out text-sm" onclick="location.href='https://github.com/'">Github</button>
-                    <button class="btn btn-color-2 project-btn py-2 px-4 rounded-full border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white transition-all duration-300 ease-in-out text-sm" onclick="location.href='https://github.com/'">Live Demo</button>
+                  <div class="p-6 flex flex-col flex-grow">
+                    <h2 class="project-title text-xl font-semibold mb-2 text-gray-800">UCI Texera: Developing an Interactive Hub & Externalizing a Data Workflow Platform - Summer 24</h2>
+                    <p class="project-description text-sm text-gray-600 mb-4 flex-grow">
+                        Enhanced and externalized Texera, an open-source data-centric AI platform. I helped creating "Texera Hub" for user content sharing. Specifically, I designed a centralized dashboard for users to manage their personal workflows and a new interactive workflow preview page with a mini-canvas. 
+                    </p>
+                    <div class="project-tags-container flex flex-wrap gap-x-2 gap-y-1 mb-4">
+                      <span class="tag bg-indigo-100 text-indigo-800 py-1 px-3">Software Engineering</span>
+                      <span class="tag bg-green-100 text-green-800 py-1 px-3">AI/ML</span>
+                      <span class="tag bg-pink-100 text-pink-800 py-1 px-3">AngularJS</span>
+                    </div>
+                    <div class="btn-container flex justify-start gap-3 mt-auto">
+                      <button class="btn project-btn text-sm py-2 px-4 border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white rounded-full transition-all" 
+                      onclick="location.href='https://github.com/Texera/texera'">Github</button>
+                      <button class="btn project-btn text-sm py-2 px-4 border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white rounded-full transition-all" 
+                      onclick="location.href='https://texera.io/'">Live Demo</button>
+                    </div>
                   </div>
                 </div>
-                <div class="details-container color-container p-6 bg-white rounded-2xl border border-gray-200 shadow-lg flex flex-col hover:shadow-xl transition-shadow">
-                  <div class="article-container mb-4 h-52">
-                    <img
-                      src="https://placehold.co/600x400/CFD8DC/455A64?text=Project+Zeta"
-                      alt="Project 6"
-                      class="project-img rounded-xl w-full h-full object-cover"
-                    />
+
+                <!-- <div class="project-card bg-white rounded-xl border border-gray-200 shadow-lg flex flex-col hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                  <div class="article-container h-52 overflow-hidden bg-gray-100 flex justify-center items-center">
+                    <img src="https://placehold.co/600x400/B2DFDB/00796B?text=Project+Delta" alt="Project Delta" class="project-img w-full h-full object-contain transition-transform duration-300 hover:scale-105"/>
                   </div>
-                  <h2 class="experience-sub-title project-title text-xl font-semibold mb-2 text-gray-800">Project Zeta</h2>
-                  <p class="project-description text-sm text-gray-600 mb-3 flex-grow">
-                    Project Zeta involved project management and coordination for a small team developing a community-focused application. This included timeline management, resource allocation, and stakeholder communication.
-                  </p>
-                  <div class="project-tags-container mb-4">
-                    <span class="tag bg-deep-purple-100 text-deep-purple-800 py-1 px-3">Project Management</span>
-                    <span class="tag bg-light-blue-100 text-light-blue-800 py-1 px-3">Team Coordination</span>
-                    <span class="tag bg-amber-100 text-amber-800 py-1 px-3">Agile</span>
+                  <div class="p-6 flex flex-col flex-grow">
+                    <h2 class="project-title text-xl font-semibold mb-2 text-gray-800">Project Delta</h2>
+                    <p class="project-description text-sm text-gray-600 mb-4 flex-grow">
+                      A placeholder description for Project Delta. This project explored advanced data modeling techniques and their application in a real-world scenario, focusing on scalability and performance.
+                    </p>
+                    <div class="project-tags-container flex flex-wrap gap-x-2 gap-y-1 mb-4">
+                      <span class="tag bg-teal-100 text-teal-800 py-1 px-3">Data Modeling</span>
+                      <span class="tag bg-cyan-100 text-cyan-800 py-1 px-3">Big Data</span>
+                      <span class="tag bg-lime-100 text-lime-800 py-1 px-3">SQL</span>
+                    </div>
+                    <div class="btn-container flex justify-start gap-3 mt-auto">
+                      <button class="btn project-btn text-sm py-2 px-4 border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white rounded-full transition-all" onclick="location.href='https://github.com/'">Github</button>
+                      <button class="btn project-btn text-sm py-2 px-4 border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white rounded-full transition-all" onclick="location.href='https://github.com/'">Live Demo</button>
+                    </div>
                   </div>
-                  <div class="btn-container flex justify-center gap-3 mt-auto">
-                    <button class="btn btn-color-2 project-btn py-2 px-4 rounded-full border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white transition-all duration-300 ease-in-out text-sm" onclick="location.href='https://github.com/'">Github</button>
-                    <button class="btn btn-color-2 project-btn py-2 px-4 rounded-full border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white transition-all duration-300 ease-in-out text-sm" onclick="location.href='https://github.com/'">Live Demo</button>
+                </div> -->
+
+                <!-- <div class="project-card bg-white rounded-xl border border-gray-200 shadow-lg flex flex-col hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                  <div class="article-container h-52 overflow-hidden bg-gray-100 flex justify-center items-center">
+                    <img src="https://placehold.co/600x400/FFCCBC/D84315?text=Project+Epsilon" alt="Project Epsilon" class="project-img w-full h-full object-contain transition-transform duration-300 hover:scale-105"/>
                   </div>
-                </div>
+                  <div class="p-6 flex flex-col flex-grow">
+                    <h2 class="project-title text-xl font-semibold mb-2 text-gray-800">Project Epsilon</h2>
+                    <p class="project-description text-sm text-gray-600 mb-4 flex-grow">
+                      Description for Project Epsilon. This was a research-oriented project focusing on the ethical implications of AI in data analysis, culminating in a comprehensive report and presentation.
+                    </p>
+                    <div class="project-tags-container flex flex-wrap gap-x-2 gap-y-1 mb-4">
+                      <span class="tag bg-orange-100 text-orange-800 py-1 px-3">AI Ethics</span>
+                      <span class="tag bg-red-100 text-red-800 py-1 px-3">Research</span>
+                      <span class="tag bg-gray-200 text-gray-700 py-1 px-3">Writing</span>
+                    </div>
+                    <div class="btn-container flex justify-start gap-3 mt-auto">
+                      <button class="btn project-btn text-sm py-2 px-4 border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white rounded-full transition-all" onclick="location.href='https://github.com/'">Github</button>
+                      <button class="btn project-btn text-sm py-2 px-4 border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white rounded-full transition-all" onclick="location.href='https://github.com/'">Live Demo</button>
+                    </div>
+                  </div>
+                </div> -->
+
+                <!-- <div class="project-card bg-white rounded-xl border border-gray-200 shadow-lg flex flex-col hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                  <div class="article-container h-52 overflow-hidden bg-gray-100 flex justify-center items-center">
+                    <img src="https://placehold.co/600x400/CFD8DC/455A64?text=Project+Zeta" alt="Project Zeta" class="project-img w-full h-full object-contain transition-transform duration-300 hover:scale-105"/>
+                  </div>
+                  <div class="p-6 flex flex-col flex-grow">
+                    <h2 class="project-title text-xl font-semibold mb-2 text-gray-800">Project Zeta</h2>
+                    <p class="project-description text-sm text-gray-600 mb-4 flex-grow">
+                      Project Zeta involved project management and coordination for a small team developing a community-focused application. This included timeline management, resource allocation, and stakeholder communication.
+                    </p>
+                    <div class="project-tags-container flex flex-wrap gap-x-2 gap-y-1 mb-4">
+                      <span class="tag bg-purple-200 text-purple-800 py-1 px-3">Project Management</span> 
+                      <span class="tag bg-sky-100 text-sky-800 py-1 px-3">Coordination</span>
+                      <span class="tag bg-amber-100 text-amber-800 py-1 px-3">Agile</span>
+                    </div>
+                    <div class="btn-container flex justify-start gap-3 mt-auto">
+                      <button class="btn project-btn text-sm py-2 px-4 border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white rounded-full transition-all" onclick="location.href='https://github.com/'">Github</button>
+                      <button class="btn project-btn text-sm py-2 px-4 border-2 border-gray-500 text-gray-600 hover:bg-gray-600 hover:text-white rounded-full transition-all" onclick="location.href='https://github.com/'">Live Demo</button>
+                    </div>
+                  </div>
+                </div> -->
+
               </div>
             </div>
-            <div class="text-center mt-12 md:mt-16">
-                <a href="./#contact" class="inline-block text-blue-600 hover:text-blue-800 transition-colors">
-                    <i data-lucide="arrow-down-circle" class="icon arrow h-12 w-12 mx-auto"></i>
+            <div class="text-center mt-16 md:mt-20">
+                <a href="./#contact" class="inline-block text-blue-600 hover:text-blue-700 transition-colors">
+                    <i data-lucide="arrow-down-circle" class="icon arrow h-14 w-14 mx-auto"></i>
                 </a>
             </div>
         </section>
